@@ -1,0 +1,13 @@
+# Arquivos temporários
+*.zip
+*.log
+diag.sh
+diag.txt
+diag_result.txt
+pack_for_deploy.py
+
+# Ferramentas
+tools/
+
+# Config local
+nexusatemporal.conf

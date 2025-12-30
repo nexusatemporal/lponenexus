@@ -833,6 +833,7 @@ img {
 /* PRICING SECTION */
 /* ==================== */
 .pricing-section {
+    display: none; /* Temporariamente oculto */
     background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
     padding: 100px 0;
 }
@@ -985,4 +986,464 @@ img {
     background: var(--white);
     color: var(--dark-gray);
     border-color: var(--white);
+}
+
+/* ==================== */
+/* PIONEERS SECTION */
+/* ==================== */
+.pioneers-section {
+    position: relative;
+    background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #0f0f0f 100%);
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.beams-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.beams-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.beam {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    opacity: 0;
+}
+
+.beam-1 {
+    animation: beam-flow 4s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.beam-2 {
+    animation: beam-flow 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.beam-3 {
+    animation: beam-flow 4.5s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.beam-4 {
+    animation: beam-flow 6s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.beam-5 {
+    animation: beam-flow 5.5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes beam-flow {
+    0% {
+        stroke-dashoffset: 1000;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        stroke-dashoffset: -1000;
+        opacity: 0;
+    }
+}
+
+.pioneers-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pioneers-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(220, 70, 10, 0.15);
+    border: 1px solid rgba(220, 70, 10, 0.3);
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: var(--primary-orange);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pioneers-badge i {
+    font-size: 1rem;
+}
+
+.pioneers-title {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.pioneers-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 48px;
+    line-height: 1.6;
+}
+
+.pioneers-subtitle strong {
+    color: var(--white);
+}
+
+.pioneers-offer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.offer-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offer-days {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+    line-height: 1;
+    font-family: var(--font-heading);
+}
+
+.offer-label {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.offer-details {
+    text-align: left;
+}
+
+.offer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 8px 0;
+    font-size: 1rem;
+}
+
+.offer-item i {
+    color: var(--primary-orange);
+    font-size: 1.3rem;
+}
+
+.pioneers-slots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.slots-label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.slots-counter {
+    display: flex;
+    gap: 8px;
+}
+
+.slot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.slot.filled {
+    background: linear-gradient(135deg, var(--primary-orange), #ff6b3d);
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 15px rgba(220, 70, 10, 0.5);
+}
+
+.slots-remaining {
+    color: var(--primary-orange);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.btn-xl {
+    padding: 20px 48px;
+    font-size: 1.1rem;
+    gap: 10px;
+}
+
+.pioneers-cta {
+    margin-bottom: 24px;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(220, 70, 10, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(220, 70, 10, 0.6), 0 0 60px rgba(220, 70, 10, 0.3);
+    }
+}
+
+.pioneers-disclaimer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+.pioneers-disclaimer i {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Pioneers Mobile */
+@media (max-width: 768px) {
+    .pioneers-title {
+        font-size: 2.5rem;
+    }
+
+    .pioneers-offer {
+        flex-direction: column;
+        gap: 32px;
+        padding: 32px 24px;
+    }
+
+    .offer-days {
+        font-size: 4rem;
+    }
+
+    .offer-details {
+        text-align: center;
+    }
+
+    .slot {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* ==================== */
+/* MOBILE SMALL SCREENS */
+/* ==================== */
+@media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 16px;
+        max-width: 100%;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar-container {
+        padding: 0 16px;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 40px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 0.85rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .hero-img-backdrop {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .floating-img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-header p {
+        font-size: 0.95rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cta-container {
+        padding: 50px 16px;
+    }
+
+    .cta h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .footer-container {
+        padding: 50px 16px 30px;
+    }
+
+    /* Pioneers Mobile Small */
+    .pioneers-section {
+        padding: 60px 0;
+    }
+
+    .pioneers-title {
+        font-size: 1.8rem;
+    }
+
+    .pioneers-subtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .pioneers-offer {
+        padding: 24px 16px;
+        gap: 24px;
+    }
+
+    .offer-days {
+        font-size: 3rem;
+    }
+
+    .offer-label {
+        font-size: 1rem;
+    }
+
+    .offer-item {
+        font-size: 0.9rem;
+    }
+
+    .slot {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slots-counter {
+        gap: 6px;
+    }
+
+    .btn-xl {
+        padding: 16px 32px;
+        font-size: 0.95rem;
+    }
+
+    /* Pricing Mobile */
+    .pricing-section {
+        padding: 60px 0;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .pricing-card {
+        padding: 28px;
+    }
+
+    .pricing-price .amount {
+        font-size: 3rem;
+    }
 }

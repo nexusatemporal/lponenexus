@@ -33,27 +33,32 @@
                 <a href="#system">O Sistema</a>
                 <a href="#advantages">Vantagens</a>
                 <a href="#pricing">Preços</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact" class="btn btn-primary">Agendar Demo</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Menu">
                 <i class="ph ph-list"></i>
             </button>
 
-            <div class="mobile-menu-overlay"></div>
-            <div class="mobile-menu">
-                <div class="mobile-menu-header">
-                    <span class="logo-text">NEXUS</span>
-                    <button class="close-menu-btn"><i class="ph ph-x"></i></button>
-                </div>
-                <div class="mobile-nav-links">
-                    <a href="#system">O Sistema</a>
-                    <a href="#advantages">Vantagens</a>
-                    <a href="#pricing">Preços</a>
-                    <a href="#contact" class="btn btn-primary btn-full">Agendar Demo</a>
-                </div>
-            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu (Moved outside nav to avoid backdrop-filter context issues) -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">NEXUS</span>
+            <button class="close-menu-btn"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#system">O Sistema</a>
+            <a href="#advantages">Vantagens</a>
+            <a href="#pricing">Preços</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" class="btn btn-primary btn-full">Agendar Demo</a>
+        </div>
+    </div>
+
 
     <!-- Hero Section -->
     <header class="hero">
@@ -156,7 +161,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="icon-box"><i class="ph ph-whatsapp-logo"></i></div>
-                    <h3>WhatsApp Oficial (WAHA)</h3>
+                    <h3>WhatsApp Oficial</h3>
                     <p>Integração estável e segura. Envie lembretes, confirmações e campanhas de marketing direto pelo
                         sistema.</p>
                 </div>
@@ -271,6 +276,73 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="section light-bg">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas sobre o Nexus Atemporal.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>O sistema serve para minha clínica pequena?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! O plano Starter foi desenhado especificamente para quem está começando ou tem uma equipe
+                            enxuta, oferecendo todas as ferramentas essenciais de gestão por um preço acessível.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como funciona a migração de dados?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nossa equipe de suporte auxilia em todo o processo de importação dos seus dados (clientes,
+                            produtos, histórico) de planilhas ou outros sistemas, garantindo uma transição suave.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>O WhatsApp é oficial mesmo?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, utilizamos API oficial para garantir estabilidade e evitar banimentos. Você pode
+                            usar seu número atual ou um novo para automações e atendimento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Posso cancelar a qualquer momento?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Com certeza. Não exigimos fidelidade de longo prazo nos planos mensais. Você tem total
+                            liberdade sobre sua assinatura.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Preciso instalar algo no computador?</span>
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não. O Nexus Atemporal é 100% em nuvem. Você acessa de qualquer lugar, pelo computador,
+                            tablet ou celular, bastando ter acesso à internet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container footer-container">
@@ -289,6 +361,7 @@
             <div class="footer-col">
                 <h4>Suporte</h4>
                 <a href="#">Central de Ajuda</a>
+                <a href="#faq">FAQ</a>
                 <a href="#">Status do Sistema</a>
                 <a href="#">Contato</a>
             </div>
